@@ -32,10 +32,11 @@ export default function Home() {
     <div className="">
 
       <Row>
-        <Col xl={24} className="text-center pt-20 pb-10">
-          <h2 className="font-semibold text-3xl ">Zonal Center attendance </h2>
+        <Col xl={24} lg={24} sm={24} xs={24}
+         className="xl:text-center pt-20 pb-10 px-10">
+          <h2 className="font-semibold xl:text-3xl text-xl text-center ">Zonal Center attendance </h2>
         </Col>
-        <Col xl={24} className="px-96 ">
+        <Col xl={24} className="xl:px-96  px-10">
           <Form
             name="basic"
             initialValues={{ remember: true }}
@@ -45,7 +46,7 @@ export default function Home() {
             layout="vertical"
           >
             <Row gutter={16}>
-              <Col xl={24}>
+              <Col xl={24} lg={24} sm={24} xs={24}>
                 <Form.Item<FieldType>
                   label="Name"
                   name="name"
@@ -57,7 +58,7 @@ export default function Home() {
                   <Input size="large" style={inputStyle}/>
                 </Form.Item>
               </Col>
-              <Col xl={24}>
+              <Col xl={24} lg={24} sm={24} xs={24}>
                 <Form.Item<FieldType>
                   label="Number"
                   name="number"
@@ -70,7 +71,7 @@ export default function Home() {
               </Col>
 
 
-              <Col xl={24}>
+              <Col xl={24} lg={24} sm={24} xs={24}>
                 <Form.Item<FieldType>
                   label="Date of birth"
                   name="DOB"
@@ -84,7 +85,7 @@ export default function Home() {
               </Col>
               
 
-              <Col xl={24}>
+              <Col xl={24} lg={24} sm={24} xs={24}>
                 <Form.Item<FieldType>
                   label="Address"
                   name="address"
@@ -96,7 +97,7 @@ export default function Home() {
                 </Form.Item>
               </Col>
 
-              <Col xl={10}>
+              <Col xl={10} lg={12} sm={16} xs={16}>
                 <Form.Item>
                   <Button type="primary" size="large" block>
                    Submit
