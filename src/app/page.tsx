@@ -23,7 +23,7 @@ export default function Home() {
   };
 
   const inputStyle = {
-    padding: '2% 2% 0 0',
+    padding: '3% 3% 0 0',
     // Add other styles as needed
   };
 
@@ -33,8 +33,8 @@ export default function Home() {
 
       <Row>
         <Col xl={24} lg={24} sm={24} xs={24}
-         className="xl:text-center pt-20 pb-10 px-10">
-          <h2 className="font-semibold xl:text-3xl text-2xl text-left ">Zonal Center attendance </h2>
+         className="xl:text-center py-10 px-10">
+          <h2 className="font-semibold xl:text-3xl xl:text-center text-lg text-center">Zonal Center Attendance </h2>
         </Col>
         <Col xl={24} className="xl:px-96  px-10">
           <Form
@@ -66,7 +66,7 @@ export default function Home() {
                     { required: true, message: "Please input your phone number!" },
                   ]}
                 >
-                  <Input  size="large" style={inputStyle}/>
+                  <Input size="large" style={inputStyle}/>
                 </Form.Item>
               </Col>
 
