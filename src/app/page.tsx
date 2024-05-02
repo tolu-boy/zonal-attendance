@@ -34,7 +34,7 @@ export default function Home() {
       <Row>
         <Col xl={24} lg={24} sm={24} xs={24}
          className="xl:text-center py-10 px-10">
-          <h2 className="font-semibold xl:text-3xl xl:text-center text-lg text-center">Zonal Center Attendance </h2>
+          <h2 className="font-semibold xl:text-3xl xl:text-center text-xl text-center">Zonal Center Attendance </h2>
         </Col>
         <Col xl={24} className="xl:px-96  px-10">
           <Form
