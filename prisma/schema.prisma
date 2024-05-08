@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime   @default(now())   // Date and time when the user was created
+  name     String                       // Last name of the user
+  address  String   
+  number   String
+  attendance Attendance[]
+
+}
+
+
+model Attendance {
+  id    String     @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime   @default(now())
+  serviceDay String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade) // User who made the appointment
+  userId    String    @db.ObjectId   
+  @@index([userId])
+
+}
