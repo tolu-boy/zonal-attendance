@@ -22,6 +22,7 @@ const Users = () => {
 
   // Format the date as desired (e.g., YYYY-MM-DD)
   const formattedDate = `${year}|${month < 10 ? '0' + month : month}|${day < 10 ? '0' + day : day}`;
+  const { Search } = Input;
 
 
   useEffect(() => {
@@ -60,6 +61,17 @@ const Users = () => {
           <h2 className="font-semibold xl:text-3xl xl:text-center text-xl text-center">
             Zonal Center Attendance
           </h2>
+        </Col>
+
+
+        <Col xl={24} className="xl:px-96 pb-10">
+
+        <Search 
+        size="large"
+        placeholder="search name"
+        enterButton
+         loading={false} />
+        
         </Col>
 
         
